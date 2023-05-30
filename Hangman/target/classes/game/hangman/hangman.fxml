@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="784.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.hangman.MyProjectController">
+   <bottom>
+      <GridPane fx:id="ButtonGrid" prefHeight="109.0" prefWidth="1067.0" BorderPane.alignment="CENTER">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+      </GridPane>
+   </bottom>
+   <right>
+      <Canvas fx:id="canv" height="487.0" width="291.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <HBox fx:id="hbLetter" prefHeight="164.0" prefWidth="1067.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="95.0" prefWidth="84.0" text="Used Letters: " />
+            <Label fx:id="LetterLbl" prefHeight="95.0" prefWidth="568.0" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <GridPane fx:id="LetterGrid" alignment="CENTER" prefHeight="406.0" prefWidth="513.0" BorderPane.alignment="CENTER">
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+   <left>
+      <Button mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="187.0" text="New Game" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
